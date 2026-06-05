@@ -15,8 +15,7 @@ RUN pip install --upgrade pip setuptools wheel
 RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
 
 RUN pip install -U vllm --pre \
-    --extra-index-url https://wheels.vllm.ai/nightly \
-    --index-strategy unsafe-best-match
+    --extra-index-url https://wheels.vllm.ai/nightly
 
 RUN pip install \
     openai>=1.0.0 \
